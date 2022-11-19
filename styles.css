@@ -315,7 +315,7 @@ header a span::before {
     position: relative;
 }
 
-.faq .answer p::before {
+.bigAnswer p::before {
     content: "";
     width: 10px;
     height: 10px;
