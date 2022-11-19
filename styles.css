@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+
+*,
+*::after,
+::before {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+:root {
+    --box-padding: 100px 5%;
+}
+
+body {
+    background-color: #001C3D;
+}
+
+header {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000000000;
+}
+
+header img {
+    max-width: 70px;
+}
+
+header a+a {
+    margin-left: 2vw;
+}
+
+header a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+header a span {
+    font-size: 18px;
+    position: relative;
+}
+
+header a span::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--primary_normal);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+
+.bar {
+    width: 30px;
+    height: 20px;
+    z-index: 100000;
+    display: none;
+}
+
+.bar div {
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: #fff;
+    transition: .3s;
+}
+
+.bar div {
+    margin-bottom: 5px;
+}
+
+.activeBars .top {
+    transform: rotate(-45deg) translate(-11px, 11px);
+}
+
+.activeBars .middle {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.activeBars .bottom {
+    transform: rotate(45deg);
+}
+
+.activeNav {
+    transform: translateX(0);
+}
+
+
+@media (max-width: 800px) {
+    .bar {
+        display: block;
+    }
+
+    nav {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgb(24, 24, 24);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vh;
+        transform: translateX(-100%);
+        transition: .3s;
+    }
+
+
+    header a {
+        font-size: 16px
+    }
+
+    header a span {
+        font-size: 20px;
+    }
+}
+
+
+.headline {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180.65deg, #001C3D 43.01%, #BD00FF 164.86%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+    text-align: center;
+    color: #fff;
+
+}
+
+.headline h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.headline p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 50vw;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #fff;
+}
+
+.headline span {
+    font-weight: 600;
+}
+
+.mainBtn {
+    cursor: pointer;
+    border: none;
+    background-color: #BD00FF;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.mainBtn::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background-color: #001c3d;
+    border-radius: 50px;
+    z-index: 1;
+    transition: ease-in-out .2s;
+}
+
+.mainBtn span {
+    z-index: 3;
+    position: relative;
+    transition: ease-in-out .2s;
+}
+
+.mainBtn:hover span {
+    color: #fff;
+}
+
+.mainBtn:hover::before {
+    top: 0;
+}
+
+
+
+.theMap {
+    padding: var(--box-padding);
+}
+
+.theMap .left {
+    gap: 5vh;
+}
+
+.theMap .right img {
+    max-width: 100%;
+}
+
+
+.topics {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.topics p {
+    font-size: 24px;
+    color: #fff;
+    position: relative;
+    margin-left: 20px;
+}
+
+.topics p:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: -20px;
+}
+
+
+
+
+
+
+.faqSection {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5vh;
+}
+
+.faq {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1vw;
+    transition: .5s;
+}
+
+.faq p,
+.faq span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    transition: .5s;
+}
+
+.faq .quest {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    cursor: pointer;
+    padding: 20px;
+    transition: .5s;
+    border-bottom: 3px solid #bd00ff;
+}
+
+.faq .answer {
+    width: 100%;
+    display: none;
+    padding: 0 20px 20px;
+    overflow: hidden;
+    height: fit-content;
+    transition: .5s;
+    border-bottom: 3px solid #bd00ff;
+}
+
+.ActiveAnswer {
+    display: block !important;
+}
+
+.faq .answer p {
+    font-weight: 300;
+    position: relative;
+}
+
+.faq .answer p::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: -20px;
+}
+
+.faq .answer p+p {
+    margin-top: 20px;
+
+}
+
+@keyframes answerView {
+    from {
+        opacity: 0;
+        height: 0;
+        transform: translateY(-20px);
+        display: none;
+    }
+
+    to {
+        opacity: 1;
+        height: fit-content;
+        transform: translateY(0);
+        display: block;
+    }
+}
+
+
+
+.callCard {
+    width: 100%;
+    min-height: 300px;
+    border-radius: 20px;
+    background: radial-gradient(#001c3d80, #5533bb94);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.callCard p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 48px;
+    max-width: 70%;
+    line-height: 64px;
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .headline {
+        padding: 0 2%;
+    }
+
+    .headline h1 {
+        font-size: 3rem;
+    }
+
+    .headline p {
+        font-size: 1.1rem;
+        max-width: 100%;
+        line-height: 1.5rem;
+    }
+
+    .theMap {
+        gap: 8vh;
+    }
+
+    .topics {
+        grid-template-columns: 1fr;
+    }
+
+    .topics p {
+        font-size: 20px;
+    }
+
+    .callCard p {
+        font-weight: 560;
+        font-size: 36px;
+        line-height: 52px;
+        max-width: 100%;
+    }
+
+    .faq .quest {
+        padding: 20px 0;
+    }
+
+    .faq p,
+    .faq span {
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
