@@ -222,7 +222,7 @@ header a span::before {
 }
 
 .theMap .right img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 
@@ -371,6 +371,76 @@ header a span::before {
     line-height: 64px;
 }
 
+.popupWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000000100;
+    backdrop-filter: blur(10px);
+}
+
+.popup{
+    width: 60%;
+    min-height: 60%;
+    background-color: aliceblue;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    animation: fadeDown .8s forwards;
+}
+
+.popup img{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    max-width: 30px;
+    cursor: pointer;
+}
+
+#sib-container{
+    border: none !important;
+    border-radius: 20px !important;
+}
+
+.sib-form{
+    background-color: transparent !important;
+}
+
+.sib-form span{
+    color: #000 !important
+}
+
+.sib-form svg{
+    fill: #000 !important;
+}
+
+.sib-form-block p{
+    color: #001C3D;
+}
+
+form input{
+    color: #000 !important;
+}
+
+
+@keyframes fadeDown {
+    from{
+        opacity: 0.5;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
 
 
@@ -403,6 +473,10 @@ header a span::before {
         font-size: 20px;
     }
 
+    .theMap .right img{
+        max-width: 100%;
+    }
+
     .callCard p {
         font-weight: 560;
         font-size: 36px;
@@ -418,5 +492,10 @@ header a span::before {
     .faq span {
         font-weight: 500;
         font-size: 20px;
+    }
+
+    .popup{
+        width: 95%;
+        padding: 15px;
     }
 }
