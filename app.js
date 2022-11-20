@@ -51,7 +51,7 @@ submitButton.addEventListener('click', () => {
 
     setTimeout(()=>{
         if (sucess.classList.contains('sib-form-message-panel--active')) {
-            window.open('https://api.whatsapp.com/send?phone=5511985871507&amp;text=Ol%C3%A1,%20gostaria%20de%20adquirir%20meu%20Mapa%20Start!')
+            window.open('https://api.whatsapp.com/send?phone=5511985871507&text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20meu%20Mapa%20Start!')
         } else {
             console.log('error')
         }
